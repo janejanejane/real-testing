@@ -4,4 +4,8 @@ angular.module( 'calculatorApp', [] )
         $scope.sum = function() {
             $scope.z = $scope.x + $scope.y;
         };
+
+        $scope.quotient = function() {
+            $scope.z = ( $scope.y === 0 ) ? 0 : $scope.x/$scope.y;
+        };
     });

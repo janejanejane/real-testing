@@ -23,4 +23,24 @@ describe( 'calculator', function() {
             expect( $scope.z ).toBe( 0 );
         });
     });
+
+    describe( 'quotient', function() {
+        it( '10 / 0 should return 0', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 10;
+            $scope.y = 0;
+            $scope.quotient();
+            expect( $scope.z ).toBe( 0 );
+        });
+
+        it( '10 / 5 should return 2', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 10;
+            $scope.y = 5;
+            $scope.quotient();
+            expect( $scope.z ).toBe( 2 );
+        });        
+    });
 });
