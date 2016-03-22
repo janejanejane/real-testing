@@ -5,6 +5,10 @@ angular.module( 'calculatorApp', [] )
             $scope.z = $scope.x + $scope.y;
         };
 
+        $scope.difference = function() {
+            $scope.z = $scope.x - $scope.y;
+        };
+
         $scope.quotient = function() {
             $scope.z = ( $scope.y === 0 ) ? 0 : $scope.x/$scope.y;
         };
