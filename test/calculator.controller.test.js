@@ -33,6 +33,24 @@ describe( 'calculator', function() {
             $scope.difference();
             expect( $scope.z ).toBe( 2 );
         });
+
+        it( '1 - 1 should equal 0', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 3;
+            $scope.y = 1;
+            $scope.difference();
+            expect( $scope.z ).toBe( 2 );
+        });
+
+        it( '1 - 3 should equal -2', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 3;
+            $scope.y = 1;
+            $scope.difference();
+            expect( $scope.z ).toBe( 2 );
+        });
     });
 
     describe( 'quotient', function() {
