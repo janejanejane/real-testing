@@ -82,5 +82,14 @@ describe( 'calculator', function() {
             $scope.multiply();
             expect( $scope.z ).toBe( 2 );
         });
+
+        it( '0 * 1 should return 2', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 0;
+            $scope.y = 1;
+            $scope.multiply();
+            expect( $scope.z ).toBe( 0 );
+        });
     });
 });
