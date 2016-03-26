@@ -92,4 +92,15 @@ describe( 'calculator', function() {
             expect( $scope.z ).toBe( 0 );
         });
     });
+
+    describe( 'power', function() {
+        it( '2 ^ 2 should return 4', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 2;
+            $scope.y = 2;
+            $scope.power();
+            expect( $scope.z ).toBe( 4 );
+        });
+    });
 });

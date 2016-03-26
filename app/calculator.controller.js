@@ -16,4 +16,8 @@ angular.module( 'calculatorApp', [] )
         $scope.quotient = function() {
             $scope.z = ( $scope.y === 0 ) ? 0 : $scope.x/$scope.y;
         };
+
+        $scope.power = function() {
+            $scope.z = Math.pow( $scope.x, $scope.y );
+        };
     });
