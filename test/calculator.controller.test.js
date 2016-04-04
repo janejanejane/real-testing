@@ -70,7 +70,7 @@ describe( 'calculator', function() {
             $scope.y = 5;
             $scope.quotient();
             expect( $scope.z ).toBe( 2 );
-        });        
+        });
     });
 
     describe( 'multiply', function() {
@@ -101,6 +101,15 @@ describe( 'calculator', function() {
             $scope.y = 2;
             $scope.power();
             expect( $scope.z ).toBe( 4 );
+        });
+
+        it( '2 ^ 3 should return 8', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 2;
+            $scope.y = 3;
+            $scope.power();
+            expect( $scope.z ).toBe( 8 );
         });
     });
 });
