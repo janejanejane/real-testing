@@ -111,5 +111,14 @@ describe( 'calculator', function() {
             $scope.power();
             expect( $scope.z ).toBe( 8 );
         });
+
+        it( '0 ^ 1 should return 0', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 0;
+            $scope.y = 1;
+            $scope.power();
+            expect( $scope.z ).toBe( 0 );
+        });
     });
 });
