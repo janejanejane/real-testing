@@ -120,5 +120,14 @@ describe( 'calculator', function() {
             $scope.power();
             expect( $scope.z ).toBe( 0 );
         });
+
+        it( '2 ^ 0 should return 1', function() {
+            var $scope = {};
+            var controller = $controller( 'CalculatorController', { $scope: $scope } );
+            $scope.x = 2;
+            $scope.y = 0;
+            $scope.power();
+            expect( $scope.z ).toBe( 1 );
+        });
     });
 });
